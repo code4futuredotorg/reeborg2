@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="amd.20160317231704.1"><vh>有關這個版本</vh>
+<v t="amd.20160317231704.1" a="E"><vh>有關這個版本</vh>
 <v t="amd.20160317231834.1" a="E"><vh>執行</vh>
 <v t="amd.20160320162504.1"><vh>在 Github Pages</vh></v>
 </v>
@@ -80,7 +80,7 @@
   &lt;link rel="stylesheet" href="src/css/reeborg_world2.css"&gt;
   &lt;!-- load after codemirror.css --&gt;
   &lt;title&gt;Reeborg's World&lt;/title&gt;
-  &lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.2.5/www/src/brython.js"&gt;
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.2.5/www/src/brython.js"&gt;
   &lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -1074,6 +1074,11 @@ fill_rectangle(0, 0, 100, 100)</t>
 
 /src/python 改為 src/python
 
-將 /build/reeborg.js 改為 build/reeborg.js</t>
+將 /build/reeborg.js 改為 build/reeborg.js
+
+必須刪除 .htaccess
+
+必須刪除 .gitignore 中的 build 檔目錄設定
+</t>
 </tnodes>
 </leo_file>
