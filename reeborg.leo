@@ -9,12 +9,13 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="amd.20160317231704.1" a="E"><vh>有關這個版本</vh>
+<v t="amd.20160317231704.1"><vh>有關這個版本</vh>
 <v t="amd.20160317231834.1" a="E"><vh>執行</vh>
 <v t="amd.20160320162504.1"><vh>在 Github Pages</vh></v>
 </v>
 <v t="amd.20160320160419.1"><vh>程式範例</vh></v>
 </v>
+<v t="amd.20160320163740.1"><vh>@edit .gitignore</vh></v>
 <v t="amd.20160317231548.2"><vh>@edit reeborg.html</vh></v>
 <v t="amd.20160317231643.1" a="E"><vh>@clean index.html</vh>
 <v t="amd.20160318163917.1" a="E"><vh>有關這個程式</vh>
