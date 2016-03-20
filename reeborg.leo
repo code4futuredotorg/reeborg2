@@ -633,7 +633,7 @@
   &lt;script src="src/blockly_msg/ko.js"&gt;&lt;/script&gt;
   &lt;script defer src="src/blockly/python_compressed.js"&gt;&lt;/script&gt;
 
-  &lt;script src="/build/reeborg.js" defer&gt;&lt;/script&gt;
+  &lt;script src="build/reeborg.js" defer&gt;&lt;/script&gt;
   &lt;script type="text/python3" src="src/python/init_reeborg.py"&gt;&lt;/script&gt;
   &lt;script defer src="src/libraries/filesaver.js"&gt;&lt;/script&gt;
   &lt;script&gt;
@@ -1071,6 +1071,8 @@ fill_rectangle(0, 0, 100, 100)</t>
 
 /src/worlds 改為 src/worlds
 
-/src/python 改為 src/python</t>
+/src/python 改為 src/python
+
+將 /build/reeborg.js 改為 build/reeborg.js</t>
 </tnodes>
 </leo_file>
