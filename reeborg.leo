@@ -10,7 +10,9 @@
 <find_panel_settings/>
 <vnodes>
 <v t="amd.20160317231704.1" a="E"><vh>有關這個版本</vh>
-<v t="amd.20160317231834.1"><vh>執行</vh></v>
+<v t="amd.20160317231834.1" a="E"><vh>執行</vh>
+<v t="amd.20160320162504.1"><vh>在 Github Pages</vh></v>
+</v>
 <v t="amd.20160320160419.1"><vh>程式範例</vh></v>
 </v>
 <v t="amd.20160317231548.2"><vh>@edit reeborg.html</vh></v>
@@ -66,15 +68,15 @@
   &lt;meta name="keywords" content="JavaScript,Python,Programming,Reeborg,Karel"&gt;
   &lt;meta name="author" content="André Roberge"&gt;
   &lt;meta name="license" content="CC BY-NC-SA 3.0"&gt;
-  &lt;link rel="shortcut icon" href="/src/images/favicon.ico" type="image/icon"&gt;
-  &lt;link rel="icon" href="/src/images/favicon.ico" type="image/icon"&gt;
-  &lt;link href="/src/css/jquery-ui.custom.min.css" rel="stylesheet"&gt;
+  &lt;link rel="shortcut icon" href="src/images/favicon.ico" type="image/icon"&gt;
+  &lt;link rel="icon" href="src/images/favicon.ico" type="image/icon"&gt;
+  &lt;link href="src/css/jquery-ui.custom.min.css" rel="stylesheet"&gt;
   &lt;link href='http://fonts.googleapis.com/css?family=Roboto+Mono:700' rel='stylesheet' type='text/css'&gt;
   &lt;!--offline &lt;link rel="stylesheet" href="offline/codemirror-5.8.0/lib/codemirror.css"&gt; /offline--&gt;
   &lt;!--online--&gt;
   &lt;link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.css"&gt;
   &lt;!--/online--&gt;
-  &lt;link rel="stylesheet" href="/src/css/reeborg_world2.css"&gt;
+  &lt;link rel="stylesheet" href="src/css/reeborg_world2.css"&gt;
   &lt;!-- load after codemirror.css --&gt;
   &lt;title&gt;Reeborg's World&lt;/title&gt;
   &lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/3.2.5/www/src/brython.js"&gt;
@@ -102,7 +104,7 @@
   &lt;/div&gt;
   &lt;header class="blue-gradient green-border"&gt;
     &lt;a id="logo" href="index_en.html" class="fake_button"&gt;
-      &lt;img src="/src/images/robot_e.png"&gt;
+      &lt;img src="src/images/robot_e.png"&gt;
       &lt;span id="site-name"&gt;&lt;/span&gt;
     &lt;/a&gt;
     &lt;div id="header-child"&gt;
@@ -222,22 +224,22 @@
   &lt;div id="world-panel" class="active"&gt;
     &lt;div id="world-controls"&gt;
       &lt;button class="blue-gradient" id="run" title="run"&gt;
-        &lt;img src="/src/images/play.png" alt="run"&gt;
+        &lt;img src="src/images/play.png" alt="run"&gt;
       &lt;/button&gt;
       &lt;button class="blue-gradient" id="step" title="step" disabled&gt;
-        &lt;img src="/src/images/step.png" alt="step"&gt;
+        &lt;img src="src/images/step.png" alt="step"&gt;
       &lt;/button&gt;
       &lt;button class="blue-gradient" id="pause" title="pause" disabled&gt;
-        &lt;img src="/src/images/pause.png" alt="pause"&gt;
+        &lt;img src="src/images/pause.png" alt="pause"&gt;
       &lt;/button&gt;
       &lt;button class="blue-gradient" id="stop" title="stop" disabled&gt;
-        &lt;img src="/src/images/stop.png" alt="stop"&gt;
+        &lt;img src="src/images/stop.png" alt="stop"&gt;
       &lt;/button&gt;
       &lt;button class="blue-gradient" id="reload" title="reload" disabled&gt;
-        &lt;img src="/src/images/reload.png" alt="reload"&gt;
+        &lt;img src="src/images/reload.png" alt="reload"&gt;
       &lt;/button&gt;
       &lt;button class="blue-gradient" id="reload2" title="reload" disabled&gt;
-        &lt;img src="/src/images/reload.png" alt="reload"&gt;
+        &lt;img src="src/images/reload.png" alt="reload"&gt;
       &lt;/button&gt;
     &lt;/div&gt;
     &lt;div id="canvas-wrapper"&gt;
@@ -295,10 +297,10 @@
           &lt;a id="onload-editor-tab" href="#onload-editor-div"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;button id="watch-variables-btn" class="blue-gradient float-right"&gt;
-          &lt;img src="/src/images/magnifying_yes.png" alt="watch"&gt;
+          &lt;img src="src/images/magnifying_yes.png" alt="watch"&gt;
         &lt;/button&gt;
         &lt;button id="highlight" class="reverse-blue-gradient float-right"&gt;
-          &lt;img src="/src/images/highlight.png" alt="highlight"&gt;
+          &lt;img src="src/images/highlight.png" alt="highlight"&gt;
         &lt;/button&gt;
       &lt;/ul&gt;
       &lt;div id="editor"&gt;
@@ -344,187 +346,187 @@
       &lt;p id="cmd-result"&gt;&lt;/p&gt;
       &lt;ul class="edit-world-canvas" id="edit-world-turn" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.turn_robot(0);"&gt;&lt;img src="/src/images/robot_e.png" alt="robot: east"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.turn_robot(0);"&gt;&lt;img src="src/images/robot_e.png" alt="robot: east"&gt;&lt;/a&gt;
           &lt;br&gt;&lt;span id="east"&gt;&lt;/span&gt;&lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.turn_robot(1);"&gt;&lt;img src="/src/images/robot_n.png" alt="robot: north"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.turn_robot(1);"&gt;&lt;img src="src/images/robot_n.png" alt="robot: north"&gt;&lt;/a&gt;
           &lt;br&gt;&lt;span id="north"&gt;&lt;/span&gt;&lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.turn_robot(2);"&gt;&lt;img src="/src/images/robot_w.png" alt="robot: west"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.turn_robot(2);"&gt;&lt;img src="src/images/robot_w.png" alt="robot: west"&gt;&lt;/a&gt;
           &lt;br&gt;&lt;span id="west"&gt;&lt;/span&gt;&lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.turn_robot(3);"&gt;&lt;img src="/src/images/robot_s.png" alt="robot: south"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.turn_robot(3);"&gt;&lt;img src="src/images/robot_s.png" alt="robot: south"&gt;&lt;/a&gt;
           &lt;br&gt;&lt;span id="south"&gt;&lt;/span&gt;&lt;/li&gt;
         &lt;li id="random-orientation"&gt;
-          &lt;a href="javascript:RUR.we.turn_robot(-1);"&gt;&lt;img src="/src/images/robot_random.png" alt="robot: random orientation"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.turn_robot(-1);"&gt;&lt;img src="src/images/robot_random.png" alt="robot: random orientation"&gt;&lt;/a&gt;
           &lt;br&gt;&lt;span id="random"&gt;&lt;/span&gt;&lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-world-canvas" id="edit-world-objects" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-token');"&gt;&lt;img src="/src/images/token.png" alt="token"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-token');"&gt;&lt;img src="src/images/token.png" alt="token"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-star');"&gt;&lt;img src="/src/images/star.png" alt="star"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-star');"&gt;&lt;img src="src/images/star.png" alt="star"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-triangle');"&gt;&lt;img src="/src/images/triangle.png" alt="triangle"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-triangle');"&gt;&lt;img src="src/images/triangle.png" alt="triangle"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-square');"&gt;&lt;img src="/src/images/square.png" alt="square"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-square');"&gt;&lt;img src="src/images/square.png" alt="square"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-strawberry');"&gt;&lt;img src="/src/images/strawberry.png" alt="strawberry"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-strawberry');"&gt;&lt;img src="src/images/strawberry.png" alt="strawberry"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-banana');"&gt;&lt;img src="/src/images/banana.png" alt="banana"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-banana');"&gt;&lt;img src="src/images/banana.png" alt="banana"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-orange');"&gt;&lt;img src="/src/images/orange.png" alt="orange"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-orange');"&gt;&lt;img src="src/images/orange.png" alt="orange"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-apple');"&gt;&lt;img src="/src/images/apple.png" alt="apple"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-apple');"&gt;&lt;img src="src/images/apple.png" alt="apple"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-leaf');"&gt;&lt;img src="/src/images/leaf.png" alt="leaf"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-leaf');"&gt;&lt;img src="src/images/leaf.png" alt="leaf"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-dandelion');"&gt;&lt;img src="/src/images/dandelion.png" alt="dandelion"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-dandelion');"&gt;&lt;img src="src/images/dandelion.png" alt="dandelion"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-carrot');"&gt;&lt;img src="/src/images/carrot.png" alt="carrot"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-carrot');"&gt;&lt;img src="src/images/carrot.png" alt="carrot"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-tulip');"&gt;&lt;img src="/src/images/tulip.png" alt="tulip"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-tulip');"&gt;&lt;img src="src/images/tulip.png" alt="tulip"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('object-daisy');"&gt;&lt;img src="/src/images/daisy.png" alt="daisy"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-daisy');"&gt;&lt;img src="src/images/daisy.png" alt="daisy"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li class="not-for-robot"&gt;
-          &lt;a href="javascript:RUR.we.select('object-box');"&gt;&lt;img src="/src/images/box.png" alt="wooden box"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('object-box');"&gt;&lt;img src="src/images/box.png" alt="wooden box"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-world-canvas" id="edit-tile" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-mud');"&gt;&lt;img src="/src/images/mud.png" alt="mud tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-mud');"&gt;&lt;img src="src/images/mud.png" alt="mud tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-water');"&gt;&lt;img src="/src/images/water.png" alt="water tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-water');"&gt;&lt;img src="src/images/water.png" alt="water tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-grass');"&gt;&lt;img src="/src/images/grass.png" alt="grass tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-grass');"&gt;&lt;img src="src/images/grass.png" alt="grass tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-pale_grass');"&gt;&lt;img src="/src/images/pale_grass.png" alt="grass tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-pale_grass');"&gt;&lt;img src="src/images/pale_grass.png" alt="grass tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-gravel');"&gt;&lt;img src="/src/images/gravel.png" alt="gravel tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-gravel');"&gt;&lt;img src="src/images/gravel.png" alt="gravel tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-ice');"&gt;&lt;img src="/src/images/ice.png" alt="ice tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-ice');"&gt;&lt;img src="src/images/ice.png" alt="ice tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-bricks');"&gt;&lt;img src="/src/images/bricks.png" alt="bricks tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-bricks');"&gt;&lt;img src="src/images/bricks.png" alt="bricks tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('tile-colour');"&gt;&lt;img src="/src/images/tile_colour.png" alt="colored tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('tile-colour');"&gt;&lt;img src="src/images/tile_colour.png" alt="colored tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-world-canvas" id="fill-tile" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-mud');"&gt;&lt;img src="/src/images/mud.png" alt="mud tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-mud');"&gt;&lt;img src="src/images/mud.png" alt="mud tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-water');"&gt;&lt;img src="/src/images/water.png" alt="water tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-water');"&gt;&lt;img src="src/images/water.png" alt="water tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-grass');"&gt;&lt;img src="/src/images/grass.png" alt="grass tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-grass');"&gt;&lt;img src="src/images/grass.png" alt="grass tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-pale_grass');"&gt;&lt;img src="/src/images/pale_grass.png" alt="grass tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-pale_grass');"&gt;&lt;img src="src/images/pale_grass.png" alt="grass tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-gravel');"&gt;&lt;img src="/src/images/gravel.png" alt="gravel tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-gravel');"&gt;&lt;img src="src/images/gravel.png" alt="gravel tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-ice');"&gt;&lt;img src="/src/images/ice.png" alt="ice tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-ice');"&gt;&lt;img src="src/images/ice.png" alt="ice tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-bricks');"&gt;&lt;img src="/src/images/bricks.png" alt="bricks tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-bricks');"&gt;&lt;img src="src/images/bricks.png" alt="bricks tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('fill-colour');"&gt;&lt;img src="/src/images/tile_colour.png" alt="colored tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('fill-colour');"&gt;&lt;img src="src/images/tile_colour.png" alt="colored tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-world-canvas" id="edit-solid-object" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('solid_object-bridge');"&gt;&lt;img src="/src/images/bridge.png" alt="bridge tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('solid_object-bridge');"&gt;&lt;img src="src/images/bridge.png" alt="bridge tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('solid_object-fence_right');"&gt;&lt;img src="/src/images/fence_right.png" alt="part of fence tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('solid_object-fence_right');"&gt;&lt;img src="src/images/fence_right.png" alt="part of fence tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('solid_object-fence_left');"&gt;&lt;img src="/src/images/fence_left.png" alt="part of fence tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('solid_object-fence_left');"&gt;&lt;img src="src/images/fence_left.png" alt="part of fence tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('solid_object-fence_double');"&gt;&lt;img src="/src/images/fence_double.png" alt="part of fence tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('solid_object-fence_double');"&gt;&lt;img src="src/images/fence_double.png" alt="part of fence tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('solid_object-fence_vertical');"&gt;&lt;img src="/src/images/fence_vertical.png" alt="part of fence tile"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('solid_object-fence_vertical');"&gt;&lt;img src="src/images/fence_vertical.png" alt="part of fence tile"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-goal-canvas" id="edit-goal-objects" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-token');"&gt;&lt;img src="/src/images/token_goal.png" alt="token"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-token');"&gt;&lt;img src="src/images/token_goal.png" alt="token"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-star');"&gt;&lt;img src="/src/images/star_goal.png" alt="star"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-star');"&gt;&lt;img src="src/images/star_goal.png" alt="star"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-triangle');"&gt;&lt;img src="/src/images/triangle_goal.png" alt="triangle"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-triangle');"&gt;&lt;img src="src/images/triangle_goal.png" alt="triangle"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-square');"&gt;&lt;img src="/src/images/square_goal.png" alt="square"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-square');"&gt;&lt;img src="src/images/square_goal.png" alt="square"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-strawberry');"&gt;&lt;img src="/src/images/strawberry_goal.png" alt="strawberry"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-strawberry');"&gt;&lt;img src="src/images/strawberry_goal.png" alt="strawberry"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-banana');"&gt;&lt;img src="/src/images/banana_goal.png" alt="banana"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-banana');"&gt;&lt;img src="src/images/banana_goal.png" alt="banana"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-orange');"&gt;&lt;img src="/src/images/orange_goal.png" alt="orange"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-orange');"&gt;&lt;img src="src/images/orange_goal.png" alt="orange"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-apple');"&gt;&lt;img src="/src/images/apple_goal.png" alt="apple"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-apple');"&gt;&lt;img src="src/images/apple_goal.png" alt="apple"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-leaf');"&gt;&lt;img src="/src/images/leaf_goal.png" alt="leaf"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-leaf');"&gt;&lt;img src="src/images/leaf_goal.png" alt="leaf"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-dandelion');"&gt;&lt;img src="/src/images/dandelion_goal.png" alt="dandelion"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-dandelion');"&gt;&lt;img src="src/images/dandelion_goal.png" alt="dandelion"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-carrot');"&gt;&lt;img src="/src/images/carrot_goal.png" alt="carrot"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-carrot');"&gt;&lt;img src="src/images/carrot_goal.png" alt="carrot"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-tulip');"&gt;&lt;img src="/src/images/tulip_goal.png" alt="tulip"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-tulip');"&gt;&lt;img src="src/images/tulip_goal.png" alt="tulip"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-daisy');"&gt;&lt;img src="/src/images/daisy_goal.png" alt="daisy"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-daisy');"&gt;&lt;img src="src/images/daisy_goal.png" alt="daisy"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('goal-box');"&gt;&lt;img src="/src/images/box_goal.png" alt="wooden box"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('goal-box');"&gt;&lt;img src="src/images/box_goal.png" alt="wooden box"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="edit-goal-canvas" id="edit-goal-position" style="display:none"&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('position-green_home_tile');"&gt;&lt;img src="/src/images/green_home_tile.png" alt="home"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('position-green_home_tile');"&gt;&lt;img src="src/images/green_home_tile.png" alt="home"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('position-house');"&gt;&lt;img src="/src/images/house.png" alt="home"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('position-house');"&gt;&lt;img src="src/images/house.png" alt="home"&gt;&lt;/a&gt;
         &lt;/li&gt;
         &lt;li&gt;
-          &lt;a href="javascript:RUR.we.select('position-racing_flag');"&gt;&lt;img src="/src/images/racing_flag.png" alt="home"&gt;&lt;/a&gt;
+          &lt;a href="javascript:RUR.we.select('position-racing_flag');"&gt;&lt;img src="src/images/racing_flag.png" alt="home"&gt;&lt;/a&gt;
         &lt;/li&gt;
       &lt;/ul&gt;
     &lt;/div&gt;
@@ -623,17 +625,17 @@
   &lt;script&gt;
     var RUR = {};
   &lt;/script&gt;
-  &lt;script src="/src/blockly/blockly_compressed.js"&gt;&lt;/script&gt;
-  &lt;script src="/src/blockly/blocks_compressed.js"&gt;&lt;/script&gt;
-  &lt;script defer src="/src/blockly/javascript_compressed.js"&gt;&lt;/script&gt;
-  &lt;script src="/src/blockly_msg/en.js"&gt;&lt;/script&gt;
-  &lt;script src="/src/blockly_msg/fr.js"&gt;&lt;/script&gt;
-  &lt;script src="/src/blockly_msg/ko.js"&gt;&lt;/script&gt;
-  &lt;script defer src="/src/blockly/python_compressed.js"&gt;&lt;/script&gt;
+  &lt;script src="src/blockly/blockly_compressed.js"&gt;&lt;/script&gt;
+  &lt;script src="src/blockly/blocks_compressed.js"&gt;&lt;/script&gt;
+  &lt;script defer src="src/blockly/javascript_compressed.js"&gt;&lt;/script&gt;
+  &lt;script src="src/blockly_msg/en.js"&gt;&lt;/script&gt;
+  &lt;script src="src/blockly_msg/fr.js"&gt;&lt;/script&gt;
+  &lt;script src="src/blockly_msg/ko.js"&gt;&lt;/script&gt;
+  &lt;script defer src="src/blockly/python_compressed.js"&gt;&lt;/script&gt;
 
   &lt;script src="/build/reeborg.js" defer&gt;&lt;/script&gt;
   &lt;script type="text/python3" src="src/python/init_reeborg.py"&gt;&lt;/script&gt;
-  &lt;script defer src="/src/libraries/filesaver.js"&gt;&lt;/script&gt;
+  &lt;script defer src="src/libraries/filesaver.js"&gt;&lt;/script&gt;
   &lt;script&gt;
     TogetherJSConfig_cloneClicks = true;
   &lt;/script&gt;
@@ -694,7 +696,7 @@
     &lt;h3 id="special-execution"&gt;&lt;/h3&gt;
     &lt;p&gt;
       &lt;button class="blue-gradient" id="reverse-step"&gt;
-        &lt;img src="/src/images/reverse_step.png" alt="reverse step"&gt;
+        &lt;img src="src/images/reverse_step.png" alt="reverse step"&gt;
       &lt;/button&gt;
       &lt;span id="reverse-step-text"&gt;&lt;/span&gt;
     &lt;/p&gt;
@@ -721,28 +723,28 @@
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;audio id="put-sound" preload&gt;
-    &lt;source src="/src/sounds/toc.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/toc.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="take-sound" preload&gt;
-    &lt;source src="/src/sounds/pick.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/pick.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="write-sound" preload&gt;
-    &lt;source src="/src/sounds/type.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/type.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="move-sound" preload&gt;
-    &lt;source src="/src/sounds/move.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/move.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="turn-sound" preload&gt;
-    &lt;source src="/src/sounds/turn.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/turn.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="build-sound" preload&gt;
-    &lt;source src="/src/sounds/brick.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/brick.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="success-sound" preload&gt;
-    &lt;source src="/src/sounds/success.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/success.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
   &lt;audio id="error-sound" preload&gt;
-    &lt;source src="/src/sounds/glitch-sound.wav" type="audio/x-wav"&gt;
+    &lt;source src="src/sounds/glitch-sound.wav" type="audio/x-wav"&gt;
   &lt;/audio&gt;
 
   &lt;div id="dialog-add-object" title="Add object in the world" style="display:none;"&gt;
@@ -966,19 +968,19 @@
         &lt;li id="kbd-js-break"&gt;&lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="kbd-objects"&gt;
-        &lt;li id="kbd-token"&gt;&lt;img src="/src/images/token.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-apple"&gt;&lt;img src="/src/images/apple.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-banana"&gt;&lt;img src="/src/images/banana.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-carrot"&gt;&lt;img src="/src/images/carrot.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-daisy"&gt;&lt;img src="/src/images/daisy.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-dandelion"&gt;&lt;img src="/src/images/dandelion.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-leaf"&gt;&lt;img src="/src/images/leaf.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-orange"&gt;&lt;img src="/src/images/orange.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-square"&gt;&lt;img src="/src/images/square.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-star"&gt;&lt;img src="/src/images/star.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-strawberry"&gt;&lt;img src="/src/images/strawberry.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-triangle"&gt;&lt;img src="/src/images/triangle.png"&gt;&lt;/li&gt;
-        &lt;li id="kbd-tulip"&gt;&lt;img src="/src/images/tulip.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-token"&gt;&lt;img src="src/images/token.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-apple"&gt;&lt;img src="src/images/apple.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-banana"&gt;&lt;img src="src/images/banana.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-carrot"&gt;&lt;img src="src/images/carrot.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-daisy"&gt;&lt;img src="src/images/daisy.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-dandelion"&gt;&lt;img src="src/images/dandelion.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-leaf"&gt;&lt;img src="src/images/leaf.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-orange"&gt;&lt;img src="src/images/orange.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-square"&gt;&lt;img src="src/images/square.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-star"&gt;&lt;img src="src/images/star.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-strawberry"&gt;&lt;img src="src/images/strawberry.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-triangle"&gt;&lt;img src="src/images/triangle.png"&gt;&lt;/li&gt;
+        &lt;li id="kbd-tulip"&gt;&lt;img src="src/images/tulip.png"&gt;&lt;/li&gt;
       &lt;/ul&gt;
       &lt;ul class="kbd-special"&gt;
         &lt;li id="kbd-colon"&gt;&amp;nbsp;&amp;nbsp;:&amp;nbsp;&amp;nbsp;&lt;/li&gt;
@@ -1003,8 +1005,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</t>
+&lt;/html&gt;</t>
 <t tx="amd.20160317231704.1">2016.03.17 git clone 自 https://github.com/aroberge/reeborg
 
 這裡將 reeborg.html 複製為  index.html</t>
@@ -1017,7 +1018,7 @@
 <t tx="amd.20160318164255.1"></t>
 <t tx="amd.20160318164406.1"></t>
 <t tx="amd.20160318164555.1">在 javascript 中以 brython 函式啟動
-brython({debug:1, pythonpath:['/src/python']});
+brython({debug:1, pythonpath:['src/python']});
 if (__BRYTHON__.__MAGIC__ != "3.2.5") {
     alert("Expecting Brython version 3.2.5 and got " + __BRYTHON__.__MAGIC__);
 }</t>
@@ -1058,5 +1059,18 @@ for i in range(size+1):
     # 垂直線
     draw_line(100+i*10, 100, 100+i*10, 100+size*10, "red")
 fill_rectangle(0, 0, 100, 100)</t>
+<t tx="amd.20160320162504.1">必須將 /src/images 改為 src/images
+
+必須將 /src/css 改為 src/css
+
+必須將 /src/blockly 改為 src/blockly
+
+/src/libraries 改為 src/libraries
+
+/src/sounds 改為 src/sounds
+
+/src/worlds 改為 src/worlds
+
+/src/python 改為 src/python</t>
 </tnodes>
 </leo_file>
