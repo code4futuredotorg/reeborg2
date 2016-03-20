@@ -13,10 +13,13 @@
 <v t="amd.20160317231834.1" a="E"><vh>執行</vh>
 <v t="amd.20160320162504.1"><vh>在 Github Pages</vh></v>
 </v>
-<v t="amd.20160320160419.1"><vh>程式範例</vh></v>
+<v t="amd.20160320160419.1" a="E"><vh>程式範例</vh>
+<v t="amd.20160320175110.1"><vh>Reeborg 的執行速度</vh></v>
+</v>
 </v>
 <v t="amd.20160320163740.1"><vh>@edit .gitignore</vh></v>
 <v t="amd.20160317231548.2"><vh>@edit reeborg.html</vh></v>
+<v t="amd.20160320180115.1"><vh>@edit world.html</vh></v>
 <v t="amd.20160317231643.1" a="E"><vh>@clean index.html</vh>
 <v t="amd.20160318163917.1" a="E"><vh>有關這個程式</vh>
 <v t="amd.20160318164555.1"><vh>Brython 啟動</vh></v>
@@ -1012,7 +1015,9 @@
 這裡將 reeborg.html 複製為  index.html</t>
 <t tx="amd.20160317231834.1">python3 -m http.server
 
-然後以瀏覽器開 localhost:8000</t>
+然後以瀏覽器開 localhost:8000
+
+因為 index.html 採用 init_reeborg.py 啟動, 因此必須在本地端啟動 python3 的 http server 才能夠正確執行, 若所有 .js 全部使用近端檔案, 或許可以直接開啟 index.html 而無需 http server (？)</t>
 <t tx="amd.20160318163745.1"></t>
 <t tx="amd.20160318163756.1"></t>
 <t tx="amd.20160318163917.1">使用 Brython 3.2.5 版</t>
@@ -1060,25 +1065,27 @@ for i in range(size+1):
     # 垂直線
     draw_line(100+i*10, 100, 100+i*10, 100+size*10, "red")
 fill_rectangle(0, 0, 100, 100)</t>
-<t tx="amd.20160320162504.1">必須將 /src/images 改為 src/images
+<t tx="amd.20160320162504.1">必須將 src/images 改為 src/images
 
-必須將 /src/css 改為 src/css
+必須將 src/css 改為 src/css
 
-必須將 /src/blockly 改為 src/blockly
+必須將 src/blockly 改為 src/blockly
 
-/src/libraries 改為 src/libraries
+src/libraries 改為 src/libraries
 
-/src/sounds 改為 src/sounds
+src/sounds 改為 src/sounds
 
-/src/worlds 改為 src/worlds
+src/worlds 改為 src/worlds
 
-/src/python 改為 src/python
+src/python 改為 src/python
 
 將 /build/reeborg.js 改為 build/reeborg.js
 
 必須刪除 .htaccess
 
-必須刪除 .gitignore 中的 build 檔目錄設定
-</t>
+必須刪除 .gitignore 中的 build 檔目錄設定</t>
+<t tx="amd.20160320175110.1">Reeborg Robot 每一步都內定 think(1000) (?)
+
+若在程式中指定 think(100) 則執行速度會快 10 倍</t>
 </tnodes>
 </leo_file>
